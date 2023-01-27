@@ -1,0 +1,48 @@
+body{
+    background:blueviolet;
+}
+
+.headerdiv{
+   justify-content: center;
+   justify-items: flex-end;
+   display: flex;
+   height: 50px;
+   flex-wrap: nowrap;
+
+    
+}
+
+.pikachu{
+    width: auto;
+    height: 100%;
+    float: right;
+    
+}
+
+
+  nav {
+    height: 100%;
+    justify-self: left;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 100%;
+    padding: 1em;
+    background-color: mintcream;
+    align-items: center;
+    transform: translateX(1em);
+    transition: 0.2s transform;
+  }
+ 
+  nav:hover,
+  nav:focus-within {
+    transform: translateX(100%);
+  }
+ 
+  a {
+    white-space: pre;
+    
+    color: black;
+  }
+ 
+  
