@@ -14,10 +14,12 @@ body{
 }
 
 .links{
-    width: 50%;
-    height: 20px;
+ 
+  
+    height: min-content;
+    justify-content: space-around;
     display: flex;
-    border: 0 auto;
+    
 
 }
 
@@ -25,6 +27,15 @@ body{
    height: 50px;
    width: min-content;
    border: 0 auto;
+}
+
+.divLinks{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  width: 15%;
+  height: 50px;
+  background-color: antiquewhite;
+  border: 2px solid black ;
 }
 header {
     padding-top: 0;
