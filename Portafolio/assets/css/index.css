@@ -6,27 +6,59 @@ body{
     height: min-content;
     background-color: lightblue;
     width: 100%;
-    display: flex;
-    justify-content: center ;
-    padding-bottom: 0;
+    padding: 0;
+    display: grid;
+    place-items: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
 
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+.introduccion{
+  justify-content:center;
+  border: 0 auto;
+  
+  width:100%;
+  height: max-content;
+}
+
 .divTexto{
+  
+  border-radius: 40px;
   border: 2px solid black;
+  left:0;
+  font-size: large;
+  text-align: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: antiquewhite;
   width: 50%;
   height: max-content;
+}
+
+
+.experiencia{
+  border: 2px solid black;
+  text-align: center;
+  position: fixed;
+  right: 0;
+  border-radius: 40px;
+  width: 50%;
+  background-color: antiquewhite;
 }
 
 .tecnologia{
   justify-content: space-between;
   display: flex;
   flex-wrap: wrap;
+  
   flex-direction: row;
 }
-.divTexto .divTecnologia{
+.divTecnologia{
   
   width: min-content;
   height: min-content;
