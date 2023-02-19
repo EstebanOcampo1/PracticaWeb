@@ -1,5 +1,19 @@
-body{
-    background:linear-gradient(purple,rgb(128,50,128));
+body {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+ 
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .titulo{
@@ -13,10 +27,25 @@ body{
 
 }
 
+
 @keyframes bounce {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
-  100% { transform: translateY(0); }
+  0% { transform: translateX(0); }
+  33% { transform: translateX(-100%); }
+  66% { transform: translateX(100%); }
+  100% { transform: translateX(0%); }
+}
+
+.imagen{
+  animation-name: bounce;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  display: flex;
+  justify-content: right;
+}
+.gitgato{
+  top: 0;
+  right: 0;
+  position: inherit;
 }
 
 .introduccion{
@@ -36,19 +65,31 @@ body{
   text-align: center;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: antiquewhite;
-  width: 50%;
+  width: 100%;
   height: max-content;
 }
 
 
 .experiencia{
-  border: 2px solid black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: 2px ;
   text-align: center;
-  position: fixed;
+  position: relative;
   right: 0;
   border-radius: 40px;
-  width: 50%;
-  background-color: antiquewhite;
+  width: 100%;
+  
+}
+
+.proyectosContainer{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: 2px ;
+  text-align: center;
+  position: relative;
+  right: 0;
+  border-radius: 40px;
+  width: 100%;
+
 }
 
 .tecnologia{
@@ -58,15 +99,37 @@ body{
   
   flex-direction: row;
 }
+.proyectos{
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  
+  flex-direction: row;
+}
+
 .divTecnologia{
+  justify-content: center;
+  border-radius: 500px;
+  padding: 5px;
   
   width: min-content;
   height: min-content;
 }
 
 .divTecnologia img{
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: auto;
+}
+
+.divProyectos{
+  justify-content: center;
+  width: 200px;
+  height: min-content;
+}
+
+.divProyectos img{
+  width: 150px;
+  height: auto;
 }
 .links{
   
@@ -94,7 +157,7 @@ body{
   height: min-content;
   background-color: lightblue;
   border: 3px solid black  ;
-  position: absolute;
+  position: fixed;
   
 }
 
@@ -127,6 +190,19 @@ header {
     color: white;
   }
 
+  .divContactame{
+    border: 2px solid black;
+    text-align: center;
+    position:relative;
+    left: 0;
+    border-radius: 40px;
+    width: 100%;
+    background-color: antiquewhite;
+    display: grid;
+    place-items: center;
+    
+    
+  }
 
 
   footer{
@@ -136,7 +212,7 @@ header {
     height: min-content;
     margin: 0 ;
     background-color: whitesmoke;
-    position: fixed;
+    position: relative;
     display: flex;
     flex-direction: column;
   }
