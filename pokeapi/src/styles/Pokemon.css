@@ -1,0 +1,40 @@
+
+.divPokemon{
+    text-align: center;
+    background-color: lightgray;
+    align-content: center;
+    justify-content: center;
+    display: grid;
+    border: 2px solid black;
+
+    
+}
+.contenedor{
+    width: 100%;
+    justify-content: center;
+    
+}
+
+.listIcon{
+    justify-self: center;
+
+}
+
+.pokedex{
+    width: 100%;
+}
+
+.divTipos{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.tipo{
+    border: 2px solid black;
+    border-radius: 14px;
+    padding: 5px;
+}
+
+
+
