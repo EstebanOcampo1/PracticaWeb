@@ -1,8 +1,10 @@
 import {useState,useEffect} from 'react'
 import '../styles/Pokemon.css'
+import { Link } from 'react-router-dom';
+import {Header} from './Header';
 import { todosLosPokemon } from '../apis/fetchPokemon';
 export const Pokemon = () => {
-    
+    const [query, setquery] = useState("");
     const [pokemon, setpokemon] = useState<any>([]);
     
     useEffect(() => {
@@ -12,20 +14,26 @@ export const Pokemon = () => {
           }
           fetchPokemon();
     }, [])
+    const filterPokemon=pokemon?.slice(0,493).filter((poke:any)=>{
+      return poke.name.toLowerCase().match(query.toLowerCase());
+  });
 
     
     
   return (
     
     <>
+    <Header query={query} setquery={setquery}/>
         <div className='contenedor'>
             <div className='row pokedex'>
-                {pokemon.map((poke:any) =>(
+                {filterPokemon?.slice(0,493).map((poke:any) =>(
                      <div className='col-4 divPokemon'>
                         
                         <h2>{poke.id}</h2>
                         <img src={poke.imgsrc} className='listIcon'/>
+                        <Link to={`/pokemons/${poke.name.toLowerCase()}`} className='listItem' key={poke.id}>
                         <h4>{poke.name.toUpperCase()}</h4>
+                        </Link>
                         <div className='divTipos'>
                         {poke.types.map((type:any) =>(
                                     <div className='tipo'>

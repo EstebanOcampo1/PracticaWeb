@@ -16,12 +16,7 @@
           name: pokemonData.name,
           imgsrc:`https://img.pokemondb.net/sprites/black-white/anim/normal/${pokemonData.name.toLowerCase()}.gif`,
           types: pokemonData.types.map((type: any) => type.type.name),
-          height: pokemonData.height,
-          weight: pokemonData.weight,
-          abilities: pokemonData.abilities.map((ability: any) => ability.ability.name),
-          image: pokemonData.sprites.other.home.front_default,
-          hp: pokemonData.stats[0].base_stat,
-          attack: pokemonData.stats[1].base_stat
+
         }
       }));
       
